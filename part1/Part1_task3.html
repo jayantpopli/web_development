@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>JavaScript Beginners</title>
+</head>
+<body>
+</body>
+<script> 
+
+console.log("-----------------------");
+
+//Write a loop that makes seven calls to console.log to output the following triangle:
+
+	for(var i=1;i<8;i++){
+		console.log("#".repeat(i)); }
+
+console.log("-----------------------");
+
+//Iterate through the string array and print it contents
+
+      let strArray= ["<option>Jazz</option>",
+      ,"<option>Blues</option>",
+      ,"<option>New Age</option>",
+      ,"<option>Classical</option>",
+      ,"<option>Opera</option>"]
+
+
+	for(var i=0;i<strArray.length;i++){
+		console.log(strArray[i]); }
+
+console.log("-----------------------");
+
+//write a code to count the elements in the array
+
+
+	var my_array=[11,22,33,44,55]
+	let count = 0;
+	let j = 0;
+
+	while(my_array[j] != undefined){
+		count += 1;
+		j += 1;	} 
+	console.log("count"+" "+count);
+
+console.log("-----------------------");
+
+
+//Foods variable holds the names of your top 20 favorite foods, starting with the best food. How can you find your fifth favorite food?
+
+	let foods = ["pizza","fries","burger","chilli","vada","idli","rice","stu"]
+	
+	console.log("fifth favourite food item " + foods[4])
+	console.log("total umber of food items " + foods.length)
+
+console.log("-----------------------");
+
+
+
+// Starting from the existing friends variable below, change the element that is currently “Mari” to “Munnabai”.
+
+	var friends = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAKchandran"];
+	console.log(friends)
+	friends[friends.indexOf("Mari")] = "Munnabai"
+	console.log(friends)
+
+console.log("-----------------------");
+
+
+//  Starting from the friends variable below, Loop and Print the names till you meet CaptianAmerica.
+	
+	let const_friends = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAKchandran"];
+
+	for(var i=0;i<const_friends.length;i++){
+		console.log(const_friends[i]);
+		if(const_friends[i] == "CaptianAmerica"){break;}
+		 }
+
+console.log("-----------------------");
+
+
+//We have two lists of friends below. Use array methods to combine them into one alphabetically-sorted list.
+
+	let friends1 = ["Mari","MaryJane","CaptianAmerica","Munnabai","Jeff","AAKchandran"];	
+
+
+	let friends2 = ["Gabbar","Rajnikanth","Mass","Spiderman","Jeff","ET"];
+
+	let friend = (friends1.concat(friends2)).sort()
+	
+	console.log(friend)
+
+console.log("-----------------------");
+
+
+//Get the first item, the middle item and the last item of the array
+
+	console.log("first " + friend[0])
+	console.log("last " + friend[friend.length-1])
+	console.log("middle " + friend[Number(friend.length/2)])
+
+console.log("-----------------------");
+
+
+//Add your name to the end of the friends array, and add another name to beginning.
+
+	friend.push("Jayant")
+	friend.unshift("Shubham")
+	console.log(friend)
+
+console.log("-----------------------");
+
+//Add Mr or Ms to the names in the friends array.
+	
+	Mr = []
+	for(var k=0;k<friend.length;k++){
+		temp = friend[k];
+		Mr[k] = "Mr" +" "+temp
+		 }
+	console.log(Mr)
+
+console.log("-----------------------");
+	
+//Concat all the names the friends array and return as comma “,” seperated string.
+	
+	all_names = "";
+	for(var k=0;k<friend.length;k++){
+		all_names += friend[k] + ",";		
+		}	
+	console.log(all_names.slice(0,-1))
+
+console.log("-----------------------");
+
+
+//Find the friends names who has letter ‘a’ and return the list.	
+	
+	name_w_a = [];
+
+	for(var l=0;l<friend.length;l++){
+		name = friend[l].split("")
+		for(var k=0;k<name.length;k++){
+			if(name[k] == "a"){
+				name_w_a.push(friend[l])
+				break;}
+			}
+
+		 }
+	console.log("name having a letter " + name_w_a);
+	
+console.log("-----------------------");
+
+//Find the names and return the list starting with letter M.
+
+	name_w_m = [];
+
+	for(var l=0;l<friend.length;l++){
+		name = friend[l].split("")
+		for(var k=0;k<name.length;k++){
+			if(name[k] == "M"){
+				name_w_m.push(friend[l])
+				break;}
+			}
+
+		 }
+	console.log("name starting with letter M " +  name_w_m);
+		
+
+console.log("-----------------------");
+
+
+
+	name_count = []
+	for(var l=0;l<friend.length;l++){
+		name_count.push(friend[l].length)		}
+	console.log(name_count)
+	console.log(friend)
+
+//Find the name with max characters and return the name.
+
+	console.log("name with max name count " + friend[name_count.indexOf(Math.max(...name_count))])
+
+//Find the name with min characters and return the name.
+
+	console.log("name with min name count " + friend[name_count.indexOf(Math.min(...name_count))])
+
+
+
+
+console.log("----------objects---------");
+
+// What the output
+
+//myobject = {1:one,”11":1,”name”:”arun”}
+//console.log(myobject.11); // gives error because 11 should be in string
+//console.log(myobject.name); // error in execution
+
+
+console.log("-----------------");
+
+
+
+//Add a new key value pair to myobject
+//key : ten
+//value : ten
+
+
+myobject = {"1":"one","11":1,"name":"arun"}
+
+myobject["10"] = 10 
+console.log(myobject);
+
+
+console.log("-----------------");
+
+//Write out an object literal to represent the data below.
+//Guvi, Geek, 6, IIT-M RP,Chennai.
+
+
+let represent = {
+	"1":"Guvi","2":"Geek","3":6,"4":"IIT-M RP","5":"Chennai" }
+
+console.log(represent)
+
+</script>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>JavaScript Beginners</title>
+</head>
+<body>
+</body>
+<script>
+
+console.log("----------------------------"); 
+
+//Square of a number
+	function sqr(x){
+		return console.log("the square of " + x + "is: "+ x * x);
+		}
+	//let num = prompt("enter the number");
+	//console.log(num);
+	sqr(+5);
+
+console.log("-----------------------------"); 
+
+//Swapping 2 numbers
+	function swap(a,b){
+		let temp = b;
+		b = a;
+		a = temp;
+		return console.log("a:"+a+" "+"b:"+b);  // how to show corresponding x,y
+			}
+	let a = 3;
+	let b = 4;
+	swap(a,b)
+console.log("--------------------------------"); 
+
+//Addition of 3 numbers
+	function add(x,y,z){
+		return console.log("the addition of the three input numbers are: " + +x + +y + +z);
+		}
+	let num_1 = 2;
+	let num_2 = 3;
+	let num_3 = 4;
+	add(num_1,num_2,num_2)
+
+console.log("---------------------------------"); 
+
+//Celsius to Fahrenheit conversion
+	function conversion_1(x){
+		far = +x*1.8 + 32;
+		return console.log(x +" "+"celsius in farenheit is equal to " + far);}    
+	let celsius = 20;
+	conversion_1(celsius);
+
+console.log("-----------------------------"); 
+
+//Meter to miles
+	function conversion_2(x){
+		return console.log(x+" "+"meter in mile is equal to" + +x*0.000621);}    
+	let meter = 1000;
+	conversion_2(meter);
+
+console.log("-----------------------------"); 
+
+//Pounds to kg
+	function conversion_3(x){
+		kg = 0.453*(+x)
+		return console.log(x+" "+"pounds in kg is equal to" + kg);}    
+	let pounds = 1000;
+	conversion_3(pounds);
+console.log("-----------------------------"); 
+
+//Calculate Batting Average
+	let run_scored = 500;
+	let times_out = 30;
+	console.log("batting avg is: " + (run_scored/times_out).toFixed(2));
+
+console.log("-----------------------------"); 
+
+//Calculate five test scores and print their average
+
+let Eng = 91  
+let Hin = 85  
+let Mat = 95  
+let Sci = 96;  
+let Soc = 86 
+
+let avg = (Eng + Hin + Mat + Sci + Soc)/5
+
+console.log("the avg of test scored is : " + avg )
+
+console.log("-----------------------------"); 
+
+//Power of any number x ^ y.
+	function power(x,y){
+		num  = 1;
+		for(let i=0;i<y;i++){
+			num *= x}
+		return console.log(x+" "+"raise to power "+y +"is" + num);}    
+	let number = 2;
+	power(number,4);	
+console.log("-----------------------------"); 
+
+//Calculate Simple Interest
+	function SI(p,r,t){
+		return console.log("the simple interest is " + p*r*t/100);}    
+	SI(1000,4,2);
+
+console.log("-----------------------------"); 
+
+//Calculate area of an equilateral triangle
+	function eqi(side){
+		return console.log("the area of equilateral triangle is  " + Math.sqrt(3,0.5)*Math.pow(side,2)/4);}    
+	eqi(4);
+
+console.log("-----------------------------"); 
+
+//Area Of Isosceles Triangle
+	function iso_tri(b,h){
+		s = 0.5*b*h
+		return console.log("the area of isosceles traingle is: "+ s );} 
+	iso_tri(10,5)	
+
+console.log("-----------------------------"); 
+
+
+//Volume Of Sphere
+	function sphere(rad){
+		vol = Math.pow(rad,3)*88/21
+		return console.log("volume of sphere is " + vol);}    
+	let rad =  7;
+	sphere(rad);
+
+console.log("-----------------------------"); 
+
+	
+//Volume Of Prism
+	function prism(b_1,b_2,h){
+		area = 0.5*(b_1+b_2)*h
+		return console.log("area of prism is " + area);}    
+	prism(10,12,15);
+
+console.log("-----------------------------"); 
+
+
+	
+//Find area of a triangle.
+	function tri(b,h){
+		area = 0.5*b*h
+		return console.log("area of triangle is " + area);}    
+	tri(5,6);
+
+console.log("-----------------------------"); 
+
+
+//Give the Actual cost and Sold cost, Calculate Discount Of Product
+	let actual_cost = 200;
+	let sold_cost = 150;
+	dis = actual_cost - sold_cost;
+	console.log("Discount on the product is: " + dis*100/actual_cost);
+
+console.log("-----------------------------"); 
+
+
+//Given their radius of a circle and find its diameter, circumference and area.
+	function circle(r){
+		cir = 44*r/7
+		dia = 2*r
+		return console.log("circumference and diameter are "+ cir +" "+ dia+" respectively ");}    
+	let r =  7;
+	circle(r);
+
+console.log("-----------------------------"); 
+
+
+//Given two numbers and perform all arithmetic operations.
+	let n_1 = 4;
+	let n_2 = 5;
+	console.log("add ",n_1+n_2);
+	console.log("sub ",n_1-n_2);
+	console.log("multiply ",n_1*n_2);
+	console.log("divide ",n_1/n_2);
+
+console.log("-----------------------------"); 
+
+
+//Display the asterisk pattern as shown below(No loop needed):
+	console.log("*****");
+	console.log("     ");
+	console.log("     ");
+	console.log("*****");
+	console.log("     ");
+	console.log("*****");
+	console.log("     ");
+	console.log("*****");
+	console.log("     ");
+	console.log("*****");
+
+console.log("-----------------------------"); 
+
+
+//Calculate electricity bill?
+//For example, a consumer consumes 100 watts per hour daily for one month. Calculate the total energy bill of that consumer if per unit rate is 10?
+	
+	let per_unit = 10
+	let total_cons = 100*30/1000;
+	bill = per_unit*total_cons
+	console.log("bill is :"+ bill)
+
+console.log("-----------------------------"); 
+
+//Program To Calculate CGPA
+
+let English = 9.1  
+let Hindi = 8.5  
+let Maths = 9.5  
+let Science =9.6;  
+let SocialStudy = 8.6  
+let CGPA = (9.1+8.5+9.5+9.6+8.6)/(5.0)  
+let CGPAper = 9.5 * (CGPA)  
+console.log((" CGPA percentage is:"+ CGPAper));  
+
+console.log("----------end of the task-------------"); 
+   
+
+
+
+</script>
+</html>
